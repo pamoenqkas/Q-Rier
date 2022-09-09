@@ -5,38 +5,39 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 
 class RegisterActivity : AppCompatActivity() {
 
-    private lateinit var inputUsername: TextInputLayout
-    private lateinit var inputPassword: TextInputLayout
-    private lateinit var inputEmail: TextInputLayout
-    private lateinit var inputTanggalLahir: TextInputLayout
-    private lateinit var inputPhoneNumber: TextInputLayout
+    private lateinit var inputUsername: TextInputEditText
+    private lateinit var inputPassword: TextInputEditText
+    private lateinit var inputEmail: TextInputEditText
+    private lateinit var inputTanggalLahir: TextInputEditText
+    private lateinit var inputPhoneNumber: TextInputEditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_register)
 
         setTitle("Registration")
 
-        inputUsername = findViewById(R.id.inputLayoutUsername)
-        inputPassword = findViewById(R.id.inputLayoutPassword)
-        inputEmail = findViewById(R.id.inputLayoutEmail)
-        inputTanggalLahir = findViewById(R.id.inputLayoutTanggalLahir)
-        inputPhoneNumber = findViewById(R.id.inputLayoutPhoneNumber)
+        inputUsername = findViewById(R.id.inputLayoutUsernameRegister)
+        inputPassword = findViewById(R.id.inputLayoutPasswordRegister)
+        inputEmail = findViewById(R.id.inputLayoutEmailRegister)
+        inputTanggalLahir = findViewById(R.id.inputLayoutTanggalLahirRegister)
+        inputPhoneNumber = findViewById(R.id.inputLayoutPhoneNumberRegister)
         val btnRegister: Button = findViewById(R.id.btnRegister)
 
         btnRegister.setOnClickListener(View.OnClickListener {
             var checkLogin = false
             val bundle = Bundle()
-            val username: String = inputUsername.getEditText()?.getText().toString()
-            val password: String = inputPassword.getEditText()?.getText().toString()
-            val email: String = inputEmail.getEditText()?.getText().toString()
-            val tanggalLahir: String = inputTanggalLahir.getEditText()?.getText().toString()
-            val phoneNumber: String = inputPhoneNumber.getEditText()?.getText().toString()
+            val username: String = inputUsername.text.toString()
+            val password: String = inputPassword.text.toString()
+            val email: String = inputEmail.text.toString()
+            val tanggalLahir: String = inputTanggalLahir.text.toString()
+            val phoneNumber: String = inputPhoneNumber.text.toString()
 
             if (username.isEmpty()){
                 inputUsername.setError("Username must be filled with text")
@@ -72,10 +73,8 @@ class RegisterActivity : AppCompatActivity() {
             bundle.putString("email", email)
             bundle.putString("tanggalLahir", tanggalLahir)
             bundle.putString("phoneNumber", phoneNumber)
-            moveHome.putExtra("register",bundle)
+            moveHome.putExtras(bundle)
             startActivity(moveHome)
-
-
         })
     }
 }

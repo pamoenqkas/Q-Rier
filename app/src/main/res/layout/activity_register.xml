@@ -49,6 +49,7 @@
             app:startIconDrawable="@drawable/ic_person_24"
             android:layout_marginBottom="8dp" >
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputLayoutUsernameRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -64,6 +65,7 @@
             app:errorEnabled="true"
             app:startIconDrawable="@drawable/ic_lock_24">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputLayoutPasswordRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -80,6 +82,7 @@
             app:startIconDrawable="@drawable/ic_email_24"
             android:layout_marginBottom="8dp" >
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputLayoutEmailRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
@@ -96,6 +99,7 @@
             app:startIconDrawable="@drawable/ic_date_24"
             android:layout_marginBottom="8dp" >
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputLayoutTanggalLahirRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="date"
@@ -112,6 +116,7 @@
             app:startIconDrawable="@drawable/ic_phone_android_24"
             android:layout_marginBottom="8dp" >
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputLayoutPhoneNumberRegister"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
