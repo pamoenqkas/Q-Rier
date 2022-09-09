@@ -19,6 +19,7 @@ class MainMenu : AppCompatActivity() {
             when(item.itemId){
                 R.id.home -> setCurrentFragment(FragmentHome())
                 R.id.history -> setCurrentFragment(FragmentHistory())
+                R.id.account -> setCurrentFragment(FragmentAccount())
             }
             true
         }
