@@ -22,8 +22,8 @@ class RegisterActivity : AppCompatActivity() {
 
         setTitle("Registration")
 
-        inputUsername = findViewById(R.id.inputLayoutUsernameRegister)
-        inputPassword = findViewById(R.id.inputLayoutPasswordRegister)
+        inputUsername = findViewById(R.id.inputLayoutUsername)
+        inputPassword = findViewById(R.id.inputLayoutPassword)
         inputEmail = findViewById(R.id.inputLayoutEmail)
         inputTanggalLahir = findViewById(R.id.inputLayoutTanggalLahir)
         inputPhoneNumber = findViewById(R.id.inputLayoutPhoneNumber)

@@ -23,8 +23,8 @@ class MainActivity: AppCompatActivity() {
         setTitle("User Login")
 
         // Menghubungkan variabel dengan view
-        inputUsername = findViewById(R.id.inputLayoutUsernameLogin)
-        inputPassword = findViewById(R.id.inputLayoutPasswordLogin)
+        inputUsername = findViewById(R.id.inputLayoutUsername)
+        inputPassword = findViewById(R.id.inputLayoutPassword)
         mainLayout = findViewById(R.id.mainLayout)
         val btnClear: Button = findViewById(R.id.btnClear)
         val btnLogin: Button = findViewById(R.id.btnLogin)
