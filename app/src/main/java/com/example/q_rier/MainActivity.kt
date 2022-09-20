@@ -76,9 +76,6 @@ class MainActivity: AppCompatActivity() {
                     checkLogin = true
             }
 
-            // Ganti Password dengan NPM
-            if (username == "user" && password == "1234") checkLogin = true
-
             if (!checkLogin) return@OnClickListener
             val moveHome = Intent(this@MainActivity, MainMenu::class.java)
             startActivity(moveHome)
