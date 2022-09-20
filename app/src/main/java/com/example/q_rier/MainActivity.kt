@@ -53,6 +53,7 @@ class MainActivity: AppCompatActivity() {
         // Aksi pada btnLogin
         btnLogin.setOnClickListener(View.OnClickListener {
             var checkLogin = false
+            var blablalba = false
             val username: String = inputUsername.text.toString()
             val password: String = inputPassword.text.toString()
             val bundle = intent.extras
@@ -61,6 +62,7 @@ class MainActivity: AppCompatActivity() {
                 inputUsername.setError("Username must be filled !")
                 checkLogin = false
             }
+
 
             // Pengecekan apakah Inputan Password kosong
             if (password.isEmpty()) {
