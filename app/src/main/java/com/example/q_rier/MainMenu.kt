@@ -22,7 +22,7 @@ class MainMenu : AppCompatActivity() {
                 R.id.account -> setCurrentFragment(FragmentAccount())
             }
             true
-// mamamsamsm
+
         }
     }
 

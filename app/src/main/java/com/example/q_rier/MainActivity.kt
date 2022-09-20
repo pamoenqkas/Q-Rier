@@ -45,6 +45,7 @@ class MainActivity: AppCompatActivity() {
             Snackbar.make(mainLayout, "Text Cleared Succes", Snackbar.LENGTH_LONG).show()
         }
 
+
         val bundle = intent.extras
         if (bundle != null){
             inputUsername.setText(bundle.getString("username"))
@@ -62,7 +63,6 @@ class MainActivity: AppCompatActivity() {
                 checkLogin = false
             }
 
-
             // Pengecekan apakah Inputan Password kosong
             if (password.isEmpty()) {
                 inputPassword.setError("Password must be filled !")
@@ -76,13 +76,15 @@ class MainActivity: AppCompatActivity() {
                     checkLogin = true
             }
 
-            // Ganti Password dengan NPM
-            if (username == "user" && password == "1234") checkLogin = true
-
-            if (!checkLogin) return@OnClickListener
-            val moveHome = Intent(this@MainActivity, MainActivity::class.java)
-            startActivity(moveHome)
-
+            if (!checkLogin){
+                Snackbar.make(mainLayout, "Username atau Password anda tidak sesuai", Snackbar.LENGTH_LONG).show()
+                return@OnClickListener
+            }else{
+                val intent = Intent(this, MainMenu::class.java)
+                startActivity(intent)
+            }
+//            val moveHome = Intent(this@MainActivity, MainActivity::class.java)
+//            startActivity(moveHome)
         })
     }
 }

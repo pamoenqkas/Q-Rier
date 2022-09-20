@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 
 
 class RegisterActivity : AppCompatActivity() {
@@ -64,6 +63,7 @@ class RegisterActivity : AppCompatActivity() {
                 inputPhoneNumber.setError("Phone number must be filled with text")
                 checkLogin = false
             }
+
 
             if (username != "" && password != "" && email != "" && tanggalLahir != "" && phoneNumber != "") checkLogin = true
             if (!checkLogin) return@OnClickListener
