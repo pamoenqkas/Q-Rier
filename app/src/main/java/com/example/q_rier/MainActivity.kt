@@ -80,7 +80,7 @@ class MainActivity: AppCompatActivity() {
             if (username == "user" && password == "1234") checkLogin = true
 
             if (!checkLogin) return@OnClickListener
-            val moveHome = Intent(this@MainActivity, HomeActivity::class.java)
+            val moveHome = Intent(this@MainActivity, MainMenu::class.java)
             startActivity(moveHome)
 
         })

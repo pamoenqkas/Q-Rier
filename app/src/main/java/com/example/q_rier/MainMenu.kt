@@ -8,10 +8,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainMenu : AppCompatActivity() {
 
     private lateinit var binding : BottomNavigationView
-
+//gguiig
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_main_menu)
 
         setCurrentFragment(FragmentHome())
         binding = findViewById(androidx.coordinatorlayout.R.id.bottom)
