@@ -14,7 +14,7 @@ class MainMenu : AppCompatActivity() {
         setContentView(R.layout.activity_main_menu)
 
         setCurrentFragment(FragmentHome())
-        binding = findViewById(androidx.coordinatorlayout.R.id.bottom)
+        binding = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         binding.setOnItemSelectedListener { item ->
             when(item.itemId){
                 R.id.home -> setCurrentFragment(FragmentHome())
