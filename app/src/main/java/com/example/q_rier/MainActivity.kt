@@ -53,6 +53,7 @@ class MainActivity: AppCompatActivity() {
         // Aksi pada btnLogin
         btnLogin.setOnClickListener(View.OnClickListener {
             var checkLogin = false
+            var lbablalbalb = false
             val username: String = inputUsername.text.toString()
             val password: String = inputPassword.text.toString()
             val bundle = intent.extras
