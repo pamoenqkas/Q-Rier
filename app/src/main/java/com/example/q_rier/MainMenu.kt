@@ -1,7 +1,10 @@
 package com.example.q_rier
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -14,7 +17,7 @@ class MainMenu : AppCompatActivity() {
         setContentView(R.layout.activity_main_menu)
 
         setCurrentFragment(FragmentHome())
-        binding = findViewById(androidx.coordinatorlayout.R.id.bottom)
+        binding = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         binding.setOnItemSelectedListener { item ->
             when(item.itemId){
                 R.id.home -> setCurrentFragment(FragmentHome())
@@ -32,4 +35,5 @@ class MainMenu : AppCompatActivity() {
         fragmentTransaction.replace(R.id.flFragment, fragment)
         fragmentTransaction.commit()
     }
+
 }
