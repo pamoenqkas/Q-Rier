@@ -7,6 +7,9 @@ import androidx.room.PrimaryKey
 data class Pelanggan(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val title: String,
-    val note: String
+    val username: String,
+    val password: String,
+    val email: String,
+    val tanggalLahir: String,
+    val phone: String
 )
