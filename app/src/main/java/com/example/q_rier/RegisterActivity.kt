@@ -64,7 +64,6 @@ class RegisterActivity : AppCompatActivity() {
                 checkLogin = false
             }
 
-
             if (username != "" && password != "" && email != "" && tanggalLahir != "" && phoneNumber != "") checkLogin = true
             if (!checkLogin) return@OnClickListener
             val moveHome = Intent(this@RegisterActivity, MainActivity::class.java)
