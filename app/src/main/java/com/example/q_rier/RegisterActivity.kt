@@ -10,6 +10,7 @@ import com.example.q_rier.databinding.ActivityRegisterBinding
 import com.example.q_rier.room.Pelanggan
 import com.example.q_rier.room.PelangganDB
 import com.google.android.material.textfield.TextInputEditText
+import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
