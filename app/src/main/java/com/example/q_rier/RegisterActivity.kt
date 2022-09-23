@@ -90,7 +90,7 @@ class RegisterActivity : AppCompatActivity() {
             })
         }
     }
-
+//test
     override fun onDestroy() {
         super.onDestroy()
         binding = null
