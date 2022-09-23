@@ -10,10 +10,10 @@ import androidx.room.RoomDatabase
     version = 1
 )
 
-abstract class NoteDB: RoomDatabase() {
-    abstract fun noteDao() : PelangganDao
+abstract class PelangganDB: RoomDatabase() {
+    abstract fun PelanganDao() : PelangganDao
     companion object {
-        @Volatile private var instance : NoteDB? = null
+        @Volatile private var instance : PelangganDB? = null
         private val LOCK = Any()
         operator fun invoke(context: Context) = instance ?:
         synchronized(LOCK){
@@ -24,8 +24,8 @@ abstract class NoteDB: RoomDatabase() {
         private fun buildDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext,
-                NoteDB::class.java,
-                "note12345.db"
+                PelangganDB::class.java,
+                "pelanggan12345.db"
             ).build()
     }
 }
