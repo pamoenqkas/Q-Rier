@@ -23,6 +23,9 @@ class MainActivity: AppCompatActivity() {
         // Ubah Title pada App Bar Aplikasi
         setTitle("User Login")
 
+        // Menyembunyikan Action Bar
+        getSupportActionBar()?.hide()
+
         val btnRegister : Button = findViewById(R.id.btnRegister)
         btnRegister.setOnClickListener(View.OnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)

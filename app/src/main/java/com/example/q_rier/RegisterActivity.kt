@@ -43,6 +43,9 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(binding?.root)
         createNotificationChannel()
 
+        //Menyembunyikan Action Bar
+        getSupportActionBar()?.hide()
+
 
         binding?.apply {
 
