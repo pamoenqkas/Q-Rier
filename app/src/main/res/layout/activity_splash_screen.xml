@@ -13,7 +13,7 @@
         android:id="@+id/iv_splashscreen"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:src="@drawable/splsc" />
+        android:src="@drawable/logoapp" />
 
     <TextView
         android:layout_width="wrap_content"
