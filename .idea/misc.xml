@@ -13,19 +13,27 @@
         <entry key="..\:/Kuliah Semester 5/PBP/Q-Rier/app/src/main/res/layout/fragment_account.xml" value="0.10562310030395136" />
         <entry key="..\:/Kuliah Semester 5/PBP/Q-Rier/app/src/main/res/layout/fragment_history.xml" value="0.2171875" />
         <entry key="..\:/SEMESTER V/Pemrogramanan Berbasis Platform/GUIDED/Q-Rier123/app/src/main/res/layout/activity_main_menu.xml" value="0.10729166666666666" />
-        <entry key="..\:/SEMESTER V/Pemrogramanan Berbasis Platform/QRIER/app/src/main/res/layout/activity_home.xml" value="0.25" />
-        <entry key="..\:/SEMESTER V/Pemrogramanan Berbasis Platform/QRIER/app/src/main/res/layout/activity_main_menu.xml" value="0.25" />
-        <entry key="..\:/SEMESTER V/Pemrogramanan Berbasis Platform/QRIER/app/src/main/res/layout/fragment_account.xml" value="0.25" />
-        <entry key="..\:/SEMESTER V/Pemrogramanan Berbasis Platform/QRIER/app/src/main/res/layout/fragment_history.xml" value="0.25" />
-        <entry key="..\:/SEMESTER V/Pemrogramanan Berbasis Platform/QRIER/app/src/main/res/menu/home_menu.xml" value="0.25" />
-        <entry key="..\:/SEMESTER V/Pemrogramanan Berbasis Platform/QRIER/app/src/main/res/menu/top_right_menu.xml" value="0.25" />
-        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_home.xml" value="0.1" />
-        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_main_menu.xml" value="0.25" />
-        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_register.xml" value="0.1" />
-        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/fragment_account.xml" value="0.22" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/drawable/bg_cricle.xml" value="0.175" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/drawable/bg_rounded_rect.xml" value="0.175" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/drawable/bg_triangle.xml" value="0.175" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.175" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/drawable/ic_baseline_looks_one_24.xml" value="0.1" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/drawable/ic_baseline_looks_two_24.xml" value="0.1" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/drawable/ic_baseline_notifications_24.xml" value="0.1" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/drawable/ic_key_24.xml" value="0.1135" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/drawable/ic_phone_android_24.xml" value="0.1" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_camera.xml" value="0.2821557971014493" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_edit.xml" value="0.3625" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_home.xml" value="0.22" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_main_menu.xml" value="0.22" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_maps.xml" value="0.2776268115942029" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/fragment_account.xml" value="0.16455696202531644" />
         <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/fragment_history.xml" value="0.1762917933130699" />
-        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/fragment_home.xml" value="0.1762917933130699" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/layout_tooltip.xml" value="0.22554347826086957" />
         <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/layout/rv_item_user.xml" value="0.33" />
         <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/menu/home_menu.xml" value="0.1" />
         <entry key="..\:/Users/bagoe/AndroidStudioProjects/QRier/app/src/main/res/menu/top_right_menu.xml" value="0.3614583333333333" />

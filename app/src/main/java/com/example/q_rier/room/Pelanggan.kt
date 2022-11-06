@@ -12,4 +12,5 @@ data class Pelanggan(
     val email: String,
     val tanggalLahir: String,
     val phone: String
+    //test
 )
