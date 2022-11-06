@@ -1,11 +1,13 @@
 package com.example.q_rier
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -18,6 +20,14 @@ class MainMenu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
 
+//        val moveAccount = Intent(this@MainMenu, Maps::class.java)
+//        val moveHistory = Intent(this@MainMenu, Camera::class.java)
+//        val button: Button = findViewById(R.id.button_maps)
+//        button.setOnClickListener() {
+//            startActivity(moveAccount)
+////            startActivity(moveHistory)
+//        }
+
         setCurrentFragment(FragmentHome())
         binding = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         binding.setOnItemSelectedListener { item ->
@@ -27,8 +37,9 @@ class MainMenu : AppCompatActivity() {
                 R.id.account -> setCurrentFragment(FragmentAccount())
             }
             true
-
         }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -59,4 +70,6 @@ class MainMenu : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
+
+//
 }

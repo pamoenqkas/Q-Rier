@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "122424935340",
-    "project_id": "q-rier-fc3eb",
-    "storage_bucket": "q-rier-fc3eb.appspot.com"
+    "project_number": "571980020948",
+    "project_id": "q-rier-f543d",
+    "storage_bucket": "q-rier-f543d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:122424935340:android:d6757f627daa558c27b009",
+        "mobilesdk_app_id": "1:571980020948:android:c76707187f31eb49bccf41",
         "android_client_info": {
           "package_name": "com.example.q_rier"
         }
       },
       "oauth_client": [
         {
-          "client_id": "122424935340-hn606oa7vcj9ef8n35f4b3b0dj2df8u6.apps.googleusercontent.com",
+          "client_id": "571980020948-1c197agrkaah853rt2r92f183s6rutg3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD_d2n2jaFtJfOfGvgzbbNUfpw5MhpRQ5Q"
+          "current_key": "AIzaSyB3vOtytP0LEun50zo8OLAtZ0Tus6HbheM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "122424935340-hn606oa7vcj9ef8n35f4b3b0dj2df8u6.apps.googleusercontent.com",
+              "client_id": "571980020948-1c197agrkaah853rt2r92f183s6rutg3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
