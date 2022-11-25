@@ -19,6 +19,7 @@ import com.android.volley.toolbox.Volley
 import models.Pemesanan
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.gson.Gson
+import com.shashank.sony.fancytoastlib.FancyToast
 import org.json.JSONObject
 import java.nio.charset.StandardCharsets
 
@@ -77,21 +78,22 @@ class ShowPemesanan : AppCompatActivity() {
                 srPemesanan!!.isRefreshing = false
 
                 if(!pemesanan.isEmpty())
-                    Toast.makeText(this@ShowPemesanan, "Data Berhasil Diambil", Toast.LENGTH_SHORT)
-                        .show()
+//                    Toast.makeText(this@ShowPemesanan, "Data Berhasil Diambil", Toast.LENGTH_SHORT).show()
+                    FancyToast.makeText(this@ShowPemesanan,"Data Berhasil Diambil",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show()
+
             }, Response.ErrorListener { error ->
                 srPemesanan!!.isRefreshing = false
                 try {
                     val responseBody =
                         String(error.networkResponse.data, StandardCharsets.UTF_8)
                     val errors = JSONObject(responseBody)
-                    Toast.makeText(
-                        this@ShowPemesanan,
-                        errors.getString("message"),
-                        Toast.LENGTH_SHORT
-                    ).show()
+//                    Toast.makeText(this@ShowPemesanan, errors.getString("message"), Toast.LENGTH_SHORT).show()
+                    FancyToast.makeText(this@ShowPemesanan,"message",FancyToast.LENGTH_LONG,FancyToast.DEFAULT,true).show()
+
                 }catch (e: Exception){
-                    Toast.makeText(this@ShowPemesanan, e.message, Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this@ShowPemesanan, e.message, Toast.LENGTH_SHORT).show()
+                    FancyToast.makeText(this@ShowPemesanan,e.message,FancyToast.LENGTH_LONG,FancyToast.DEFAULT,true).show()
+
                 }
             }) {
             @Throws(AuthFailureError::class)
@@ -113,20 +115,22 @@ class ShowPemesanan : AppCompatActivity() {
                 val gson = Gson()
                 var pemesanan = gson.fromJson(response, Pemesanan::class.java)
                 if(pemesanan != null)
-                    Toast.makeText(this@ShowPemesanan, "Data Berhasil Dihapus", Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this@ShowPemesanan, "Data Berhasil Dihapus", Toast.LENGTH_SHORT).show()
+                FancyToast.makeText(this@ShowPemesanan,"Data Berhasil Dihapus",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show()
+
                 allPemesanan()
             }, Response.ErrorListener { error ->
                 setLoading(false)
                 try{
                     val responseBody = String(error.networkResponse.data, StandardCharsets.UTF_8)
                     val errors = JSONObject(responseBody)
-                    Toast.makeText(
-                        this@ShowPemesanan,
-                        errors.getString("messsage"),
-                        Toast.LENGTH_SHORT
-                    ).show()
+//                    Toast.makeText(this@ShowPemesanan, errors.getString("messsage"), Toast.LENGTH_SHORT).show()
+                    FancyToast.makeText(this@ShowPemesanan,"message",FancyToast.LENGTH_LONG,FancyToast.DEFAULT,true).show()
+
                 }catch (e: java.lang.Exception){
-                    Toast.makeText(this@ShowPemesanan, e.message, Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this@ShowPemesanan, e.message, Toast.LENGTH_SHORT).show()
+                    FancyToast.makeText(this@ShowPemesanan,e.message,FancyToast.LENGTH_LONG,FancyToast.DEFAULT,true).show()
+
                 }
             }){
             @Throws(AuthFailureError::class)
