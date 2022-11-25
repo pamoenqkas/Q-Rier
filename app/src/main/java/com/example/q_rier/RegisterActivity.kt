@@ -79,32 +79,20 @@ class RegisterActivity : AppCompatActivity() {
                 if (username.isEmpty()) {
                     inputLayoutUsername.setError("Username must be filled with text")
                     checkLogin = false
-                }
-
-
-                if (password.isEmpty()) {
+                }else if (password.isEmpty()) {
                     inputLayoutPassword.setError("Password must be filled with text")
                     checkLogin = false
-                }
-
-                if (email.isEmpty()) {
+                }else if (email.isEmpty()) {
                     inputLayoutEmail.setError("Email must be filled with text")
                     checkLogin = false
-                }
-
-                if (tanggalLahir.isEmpty()) {
+                }else if (tanggalLahir.isEmpty()) {
                     inputLayoutTanggalLahir.setError("Tanggal lahir must be filled with text")
                     checkLogin = false
-                }
-
-                if (phoneNumber.isEmpty()) {
+                }else if (phoneNumber.isEmpty()) {
                     inputLayoutPhoneNumber.setError("Phone number must be filled with text")
                     checkLogin = false
-                }
-
-                if (username != "" && password != "" && email != "" && tanggalLahir != "" && phoneNumber != "") checkLogin =
+                }else if (username != "" && password != "" && email != "" && tanggalLahir != "" && phoneNumber != "") checkLogin =
                     true
-
                 if (!checkLogin) return@OnClickListener
                 val moveHome = Intent(this@RegisterActivity, MainActivity::class.java)
 
