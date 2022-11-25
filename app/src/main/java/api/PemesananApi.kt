@@ -1,4 +1,4 @@
-package com.example.q_rier
+package api
 
 class PemesananApi {
     companion object{
