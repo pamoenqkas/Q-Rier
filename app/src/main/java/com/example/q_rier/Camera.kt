@@ -23,6 +23,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.q_rier.databinding.ActivityCameraBinding
 import com.google.zxing.integration.android.IntentIntegrator
+import com.shashank.sony.fancytoastlib.FancyToast
 import java.lang.Exception
 
 class Camera : AppCompatActivity(), View.OnClickListener {
@@ -165,7 +166,7 @@ class Camera : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun showToast(message: String){
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+        FancyToast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
     private fun pickImageCamera(){
