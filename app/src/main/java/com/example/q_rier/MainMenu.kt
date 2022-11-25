@@ -39,7 +39,6 @@ class MainMenu : AppCompatActivity() {
             true
         }
 
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -70,6 +69,4 @@ class MainMenu : AppCompatActivity() {
         fragmentTransaction.commit()
     }
 
-
-//
 }
