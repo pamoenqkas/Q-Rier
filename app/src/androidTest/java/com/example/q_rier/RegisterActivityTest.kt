@@ -66,7 +66,7 @@ class RegisterActivityTest {
         )
         textInputEditText.perform(replaceText("tt"), closeSoftKeyboard())
 
-        pressBack()
+
 
         val materialButton2 = onView(
             allOf(
@@ -102,7 +102,7 @@ class RegisterActivityTest {
         )
         textInputEditText2.perform(replaceText("tt"), closeSoftKeyboard())
 
-        pressBack()
+
 
         val materialButton3 = onView(
             allOf(
@@ -138,7 +138,7 @@ class RegisterActivityTest {
         )
         textInputEditText3.perform(replaceText("tt"), closeSoftKeyboard())
 
-        pressBack()
+
 
         val textInputEditText4 = onView(
             allOf(
@@ -155,7 +155,7 @@ class RegisterActivityTest {
         )
         textInputEditText4.perform(replaceText("22"), closeSoftKeyboard())
 
-        pressBack()
+
 
         val materialButton4 = onView(
             allOf(
@@ -191,7 +191,7 @@ class RegisterActivityTest {
         )
         textInputEditText5.perform(replaceText("82"), closeSoftKeyboard())
 
-        pressBack()
+
 
         val materialButton5 = onView(
             allOf(
