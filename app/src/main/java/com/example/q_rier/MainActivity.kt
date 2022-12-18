@@ -6,15 +6,20 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.android.volley.toolbox.StringRequest
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import java.net.HttpURLConnection
+import java.net.URL
+import java.net.URLEncoder
 
 class MainActivity: AppCompatActivity() {
 
     private lateinit var inputUsername: TextInputEditText
     private lateinit var inputPassword: TextInputEditText
     private lateinit var mainLayout: ConstraintLayout
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,11 +88,27 @@ class MainActivity: AppCompatActivity() {
                 Snackbar.make(mainLayout, "Username atau Password anda tidak sesuai", Snackbar.LENGTH_LONG).show()
                 return@OnClickListener
             }else{
+
                 val intent = Intent(this, MainMenu::class.java)
                 startActivity(intent)
             }
 //            val moveHome = Intent(this@MainActivity, MainActivity::class.java)
 //            startActivity(moveHome)
         })
+    }
+    fun sendGet() {
+        val url = URL("http//192.168.18.14/login/login.php")
+
+        with(url.openConnection() as HttpURLConnection) {
+            requestMethod = "GET"  // optional default is GET
+
+            println("\nSent 'GET' request to URL : $url; Response Code : $responseCode")
+
+            inputStream.bufferedReader().use {
+                it.lines().forEach { line ->
+                    println(line)
+                }
+            }
+        }
     }
 }

@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import camera.Camera
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainMenu : AppCompatActivity() {
@@ -48,11 +48,19 @@ class MainMenu : AppCompatActivity() {
         return true
     }
 
+
+
     override fun onOptionsItemSelected(item: MenuItem) : Boolean{
         if(item.itemId == R.id.menu_camera){
             val intent = Intent(this, Camera::class.java)
             startActivity(intent)
-        }else {
+        }else if (item.itemId == R.id.menu_map) {
+            val intent = Intent(this, Maps::class.java)
+            startActivity(intent)
+        }else if (item.itemId == R.id.menu_account) {
+            val intent = Intent(this, ViewProfile::class.java)
+            startActivity(intent)
+        }else{
             val builder: AlertDialog.Builder = AlertDialog.Builder(this@MainMenu)
             builder.setMessage("Are you sure want to exit ?")
                 .setPositiveButton("YES", object : DialogInterface.OnClickListener {
