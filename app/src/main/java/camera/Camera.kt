@@ -1,6 +1,5 @@
-package com.example.q_rier
+package camera
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.SearchManager
@@ -8,23 +7,20 @@ import android.content.ContentValues
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.hardware.Camera
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.view.View
-import android.widget.FrameLayout
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.q_rier.R
 import com.example.q_rier.databinding.ActivityCameraBinding
 import com.google.zxing.integration.android.IntentIntegrator
 import com.shashank.sony.fancytoastlib.FancyToast
-import java.lang.Exception
 
 class Camera : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityCameraBinding
