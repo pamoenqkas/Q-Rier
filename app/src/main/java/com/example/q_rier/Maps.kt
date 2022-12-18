@@ -6,6 +6,7 @@ import android.preference.PreferenceManager
 import android.preference.PreferenceManager.getDefaultSharedPreferences
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_maps.*
 import kotlinx.android.synthetic.main.fragment_history.*
 import org.json.JSONException
 import org.json.JSONObject
@@ -27,6 +28,7 @@ class Maps : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
+
 
         Configuration.getInstance().load(this, PreferenceManager.getDefaultSharedPreferences(this))
 

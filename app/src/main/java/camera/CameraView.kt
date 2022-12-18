@@ -1,4 +1,4 @@
-package com.example.q_rier
+package camera
 
 
 import android.content.Context

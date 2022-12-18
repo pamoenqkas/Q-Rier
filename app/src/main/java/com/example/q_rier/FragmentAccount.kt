@@ -19,23 +19,7 @@ class FragmentAccount : Fragment() {
 
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false)
-    }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val layoutManager = LinearLayoutManager(context)
-        val adapter : RVUserAdapter = RVUserAdapter(User.listOfUser)
 
-        val rvUser : RecyclerView = view.findViewById(R.id.rv_user)
 
-        rvUser.layoutManager = layoutManager
-
-        rvUser.setHasFixedSize(true)
-
-        rvUser.adapter = adapter
-    }
 }
