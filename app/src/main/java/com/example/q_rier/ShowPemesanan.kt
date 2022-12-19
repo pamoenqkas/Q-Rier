@@ -108,7 +108,8 @@ class ShowPemesanan : AppCompatActivity() {
 
     fun deletePemesanan(id: Long){
         setLoading(true)
-        val stringRequest: StringRequest = object :
+        val stringRequest: StringRequest = @SuppressLint("SuspiciousIndentation")
+        object :
             StringRequest(Method.DELETE, PemesananApi.DELETE_URL + id, Response.Listener { response ->
                 setLoading(false)
 

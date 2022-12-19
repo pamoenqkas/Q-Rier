@@ -30,7 +30,8 @@ import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import models.Users
+import com.example.q_rier.User.User
+import com.example.q_rier.User.UserApi
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
@@ -64,7 +65,6 @@ class RegisterActivity : AppCompatActivity() {
 
         //Menyembunyikan Action Bar
         getSupportActionBar()?.hide()
-
 
         binding?.apply {
 
@@ -124,6 +124,8 @@ class RegisterActivity : AppCompatActivity() {
             })
         }
     }
+
+
 
     //test
     private fun createNotificationChannel() {
@@ -189,69 +191,69 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun createUser() {
-        val user = Users(
-            inputLayoutUsernameRegister!!.text.toString(),
-            inputLayoutPasswordRegister!!.text.toString(),
-            inputLayoutEmailRegister!!.text.toString(),
-            inputLayoutTanggalLahirRegister!!.text.toString(),
-            inputLayoutPhoneNumberRegister!!.text.toString(),
-        )
-        val url = URL("http//192.168.18.14/login/register.php")
-        val stringRequest: StringRequest =
-            object :
-                StringRequest(Method.POST, RegisterApi.ADD_URL, Response.Listener { response ->
-                    val gson = Gson()
-                    var user = gson.fromJson(response, Users::class.java)
-
-                    if (user != null)
-                        Toast.makeText(
-                            this@RegisterActivity,
-                            "Data Berhasil Ditambahkan",
-                            Toast.LENGTH_SHORT
-                        ).show()
-
-                    val returnIntent = Intent()
-                    setResult(RESULT_OK, returnIntent)
-                    finish()
-
-
-                }, Response.ErrorListener { error ->
-
-                    try {
-                        val responseBody =
-                            String(error.networkResponse.data, StandardCharsets.UTF_8)
-                        val errors = JSONObject(responseBody)
-                        Toast.makeText(
-                            this@RegisterActivity,
-                            errors.getString("message"),
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    } catch (e: Exception) {
-                        Toast.makeText(this@RegisterActivity, e.message, Toast.LENGTH_SHORT).show()
-                    }
-                }) {
-                @Throws(AuthFailureError::class)
-                override fun getHeaders(): Map<String, String> {
-                    val headers = HashMap<String, String>()
-                    headers["Accept"] = "application/json"
-                    return headers
-                }
-
-                @Throws(AuthFailureError::class)
-                override fun getBody(): ByteArray {
-                    val gson = Gson()
-                    val requestBody = gson.toJson(user)
-                    return requestBody.toByteArray(StandardCharsets.UTF_8)
-                }
-
-                override fun getBodyContentType(): String {
-                    return "application/json"
-                }
-            }
-
-        queue!!.add(stringRequest)
-    }
+//    private fun createUser() {
+//        val user = Users(
+//            inputLayoutUsernameRegister!!.text.toString(),
+//            inputLayoutPasswordRegister!!.text.toString(),
+//            inputLayoutEmailRegister!!.text.toString(),
+//            inputLayoutTanggalLahirRegister!!.text.toString(),
+//            inputLayoutPhoneNumberRegister!!.text.toString(),
+//        )
+//        val url = URL("http//192.168.18.14/login/register.php")
+//        val stringRequest: StringRequest =
+//            object :
+//                StringRequest(Method.POST, RegisterApi.ADD_URL, Response.Listener { response ->
+//                    val gson = Gson()
+//                    var user = gson.fromJson(response, Users::class.java)
+//
+//                    if (user != null)
+//                        Toast.makeText(
+//                            this@RegisterActivity,
+//                            "Data Berhasil Ditambahkan",
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+//
+//                    val returnIntent = Intent()
+//                    setResult(RESULT_OK, returnIntent)
+//                    finish()
+//
+//
+//                }, Response.ErrorListener { error ->
+//
+//                    try {
+//                        val responseBody =
+//                            String(error.networkResponse.data, StandardCharsets.UTF_8)
+//                        val errors = JSONObject(responseBody)
+//                        Toast.makeText(
+//                            this@RegisterActivity,
+//                            errors.getString("message"),
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+//                    } catch (e: Exception) {
+//                        Toast.makeText(this@RegisterActivity, e.message, Toast.LENGTH_SHORT).show()
+//                    }
+//                }) {
+//                @Throws(AuthFailureError::class)
+//                override fun getHeaders(): Map<String, String> {
+//                    val headers = HashMap<String, String>()
+//                    headers["Accept"] = "application/json"
+//                    return headers
+//                }
+//
+//                @Throws(AuthFailureError::class)
+//                override fun getBody(): ByteArray {
+//                    val gson = Gson()
+//                    val requestBody = gson.toJson(user)
+//                    return requestBody.toByteArray(StandardCharsets.UTF_8)
+//                }
+//
+//                override fun getBodyContentType(): String {
+//                    return "application/json"
+//                }
+//            }
+//
+//        queue!!.add(stringRequest)
+//    }
     fun sendGet() {
         val url = URL("http//192.168.18.14/login/register.php")
 
